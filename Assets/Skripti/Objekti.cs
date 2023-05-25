@@ -28,13 +28,13 @@ public class Objekti : MonoBehaviour {
 	[HideInInspector]
 	public GameObject pedejaisVilktais = null;
 
-	void start (){
+	void Start (){
 		//uzsakot speli piefikse kur sakotneji atrodas katra masina
 		atkrMKoord = 
-		atkritumuMasina.GetComponent<RectTransform>().localPosition;
+		    atkritumuMasina.GetComponent<RectTransform>().localPosition;
 		atrPKoord = 
-		atkritumuMasina.GetComponent<RectTransform>().localPosition;
+			atraPalidziba.GetComponent<RectTransform>().localPosition;
 		bussKoord = 
-		atkritumuMasina.GetComponent<RectTransform>().localPosition;
+			autobuss.GetComponent<RectTransform>().localPosition;
 	}
 }
