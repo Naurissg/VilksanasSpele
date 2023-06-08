@@ -10,3 +10,4 @@ Projekts demonstre drag and drop funkcionalitati. Sp'eles mērķis ir pēc iesp�
 - [x] Platuma maiņa pa X asi
 - [x] Platuma maiņa pa Y asi
 - [x] Skaņas efekti
+- [x] Pabeigts projekts
