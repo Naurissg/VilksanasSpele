@@ -16,6 +16,11 @@ public class Objekti : MonoBehaviour {
 	public GameObject traktors1;
 	public GameObject traktors5;
 	public GameObject ugunsdzeseji;
+	public int sk;
+	public GameObject UzEkrans;
+	public GameObject zvaigzne1;
+	public GameObject zvaigzne2;
+	public GameObject zvaigzne3;
 
 
 	//uzglabas katra transortlidzekla sakotnejo atraśanas vietu

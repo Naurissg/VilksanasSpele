@@ -10,7 +10,6 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 	private float xIzmeruStarp, yIzmeruStarp;
 	public Objekti objektuSkripts;
 
-
 	public void OnDrop(PointerEventData eventData){
 		if (eventData.pointerDrag != null) {
 			if (eventData.pointerDrag.tag.Equals (tag)) {
@@ -44,8 +43,8 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 						GetComponent<RectTransform> ().anchoredPosition;
 
 					eventData.pointerDrag.
-					GetComponent<RectTransform> ().localPosition =
-						GetComponent<RectTransform> ().localPosition;
+					GetComponent<RectTransform> ().localRotation =
+						GetComponent<RectTransform> ().localRotation;
 
 					eventData.pointerDrag.
 					GetComponent<RectTransform> ().localScale =
@@ -55,61 +54,85 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					case "atkritumi":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [1]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					case "medicina":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [2]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					case "buss":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [3]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					case "b2":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [4]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					case "cementMasin":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [5]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					case "e46":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [6]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					case "e61":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [7]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					case "Ekskav":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [8]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					case "policija":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [9]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					case "Trakt1":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [10]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					case "Trakt5":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [11]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					case "ugunsdzes":
 						objektuSkripts.skanasAvots.
 						PlayOneShot (objektuSkripts.skanaKoAtskanot [12]);
+						objektuSkripts.sk++;
+						Debug.Log (objektuSkripts.sk);
 						break;
 
 					default:

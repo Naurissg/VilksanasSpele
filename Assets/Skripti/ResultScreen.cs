@@ -1,58 +1,55 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ResultScreen : MonoBehaviour
 {
 
-	public GameObject[] objectsToCollect; // Array of objects to collect
-	public float maxTime = 120f; // Maximum time allowed to collect all objects
-	public GameObject endImage; // End image with stars
-	public Image[] starImages; // Images for the stars
-	public Button playAgainButton; // Play Again button
-
-	private int collectedObjectsCount = 0; // Counter for collected objects
-	private float timer = 0f; // Timer for tracking time
-	private bool gameFinished = false; // Flag to check if the game is finished
+	public GameObject[] objectsToCollect; // Array objekti kas tiek saglabati
+	public GameObject endImage; // Beigu ekrans ar zvaigznem
+	public Image[] starImages; // Bilde zvaigznem
+	public Objekti objektuSkripts;
+	private int starCount = 0;
+	private int collectedObjectsCount = 11; // Savākto priekšmetu skaitītājs
+	private float timer; // Taimeris laika izsekošanai
+	public bool gameFinished; // parbaude vai sp'ele ir beigusies
 
 	private void Start()
-
 	{
-
-		// Hide the end image and stars initially
+	timer = 0f;
+		gameFinished = false;
 		endImage.SetActive(false);
 		foreach (var starImage in starImages)
 		{
 			starImage.gameObject.SetActive(false);
 
 		}
-		// Disable the Play Again button
-		playAgainButton.interactable = false;
 	}
 	private void Update()
 	{
 		// Check if the game is finished
 		if (gameFinished)
-			return;
-		
+		return;
+		else 	 
 		// Update the timer
 		timer += Time.deltaTime;
 		// Check if all objects are collected
-		if (collectedObjectsCount >= objectsToCollect.Length)
+		if (objektuSkripts.sk == 11)
 		{
 			// Game finished
 			gameFinished = true;
 			// Calculate the number of stars based on time
 
-			int starCount = 1;
-
-			if (timer <= maxTime * 0.80f)
+			if (timer <= 90)
 				starCount = 3;
 			
-			else if (timer <= maxTime * 0.120f)
-
+			else if (timer >= 90 && timer <= 150)
 				starCount = 2;
-
+			
+			else if (timer >= 150)
+				starCount = 1;
+			
 			// Show the end image and stars
 			endImage.SetActive(true);
 			for (int i = 0; i < starCount; i++)
@@ -69,9 +66,4 @@ public class ResultScreen : MonoBehaviour
 		collectedObjectsCount++;
 	}
 		
-	public void PlayAgain()
-	{
-		// Reload the current scene to restart the game
-		UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 	}
-}
